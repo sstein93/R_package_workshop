@@ -1,1 +1,1 @@
-# R_package_workshop
+# R package workshop
