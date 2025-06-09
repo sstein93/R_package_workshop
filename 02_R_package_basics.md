@@ -110,7 +110,7 @@ Package: dataexplore
 Title: Data Exploration Tools
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
+    person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: This package contains useful functions for exploratory data analysis, including calculating summary statistics and plotting data distributions.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
@@ -122,7 +122,7 @@ RoxygenNote: 7.2.3
 
 ### Author
 
-Use the `Authors@R` field to identify the package\'s author, and whom to contact if something goes wrong. This field is unusual because it contains executable R code rather than plain text.
+Use the `Authors@R` field to identify the package's author, and whom to contact if something goes wrong. This field is unusual because it contains executable R code rather than plain text.
 
 ```         
 Authors@R: person("Count", "Dracula", email = "dracula@countingbats.com",
@@ -139,13 +139,13 @@ This command says that Count Dracula is both the maintainer (`cre`) and author (
 
 The `person()` required inputs are:
 
--    The name, specified by the first two arguments, `given` and `family`
+-   The name, specified by the first two arguments, `given` and `family`
 
 -   The `email` address, which is only an absolute requirement for the maintainer.
 
 -   One or more three letter codes specifying the `role`. These are the most important roles to know about:
 
-    -   `cre`: the creator or maintainer, the person you should bother if you have problems. Despite being short for \"creator\", this is the correct role to use for the current maintainer, even if they are not the initial creator of the package.
+    -   `cre`: the creator or maintainer, the person you should bother if you have problems. Despite being short for "creator", this is the correct role to use for the current maintainer, even if they are not the initial creator of the package.
 
     -   `aut`: authors
 
@@ -154,3 +154,23 @@ The `person()` required inputs are:
     -   `cph`: copyright holder. This is used to list additional copyright holders who are not authors, typically companies, like an employer of one or more of the authors.
 
     -   `fnd`: funders.
+
+### License
+
+The last thing we will update now is the software license. The describes how our code can be used and without one people must assume that it can\'t be used at all! It is good to be as open and free as you can with your license to make sure your code is as useful to the community as possible. For this example we will use the MIT license which basically says the code can be used for any purpose and doesn\'t come with any warranties.
+
+Now the DESCRIPTION file might look like:
+
+```         
+Package: dataexplore
+Title: Data Exploration Tools
+Version: 0.0.0.9000
+Authors@R: 
+    person("Count", "Dracula", email = "dracula@countingbats.com", role = c("aut", "cre"),
+           comment = c(ORCID = "1234"))
+Description: This package contains useful functions for exploratory data analysis, including calculating summary statistics and plotting data distributions.
+License: `use_mit_license()`
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+```
