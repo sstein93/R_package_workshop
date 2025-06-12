@@ -15,7 +15,7 @@ Then, decide on a name for your package. Package names can only consist of lette
 
 The example code in this workshop will make a package named \`exploredata\`, which you can use as well if you want to follow along.
 
-We will use the \`usethis::create_package()\` function to create the template for our package. All it needs is the path to the directory where we want to create the package. For example:
+We will use the `usethis::create_package()` function to create the template for our package. All it needs is the path to the directory where we want to create the package. For example:
 
 ```         
 usethis::create_package("~/path/to/dataexplore")
@@ -48,7 +48,7 @@ RoxygenNote: 7.2.3
 ✔ Setting active project to '<no active project>'
 ```
 
-You will see something similar everytime you run a `usethis` command. Green ticks indicate a step has been completed correctly. A red dot means that `usethis` can't complete something and you might need to follow instructions to do it manually.
+You will see something similar every time you run a `usethis` command. Green ticks indicate a step has been completed correctly. A red dot means that `usethis` can't complete something and you might need to follow instructions to do it manually.
 
 A new RStudio session with your R package should open, and you should see something like this
 
@@ -157,7 +157,21 @@ The `person()` required inputs are:
 
 ### License
 
-The last thing we will update now is the software license. The describes how our code can be used and without one people must assume that it can\'t be used at all! It is good to be as open and free as you can with your license to make sure your code is as useful to the community as possible. For this example we will use the MIT license which basically says the code can be used for any purpose and doesn\'t come with any warranties.
+The last thing we will update now is the software license. The describes how our code can be used and without one people must assume that it can't be used at all! It is good to be as open and free as you can with your license to make sure your code is as useful to the community as possible. For this example we will use the MIT license which basically says the code can be used for any purpose and doesn't come with any warranties.
+
+Run this:
+
+```         
+usethis::use_mit_license("Your name")
+```
+
+```         
+ usethis::use_mit_license("Shayna Simonstein")
+✔ Adding 'MIT + file LICENSE' to License
+✔ Writing 'LICENSE'
+✔ Writing 'LICENSE.md'
+✔ Adding '^LICENSE\\.md$' to '.Rbuildignore'
+```
 
 Now the DESCRIPTION file might look like:
 
@@ -169,7 +183,7 @@ Authors@R:
     person("Count", "Dracula", email = "dracula@countingbats.com", role = c("aut", "cre"),
            comment = c(ORCID = "1234"))
 Description: This package contains useful functions for exploratory data analysis, including calculating summary statistics and plotting data distributions.
-License: `use_mit_license()`
+License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
